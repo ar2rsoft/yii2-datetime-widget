@@ -1,5 +1,5 @@
 <?php
-namespace trntv\yii\datetime;
+namespace ar2rsoft\yii\datetime;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -7,7 +7,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
-use trntv\yii\datetime\assets\DateTimeAsset;
+use ar2rsoft\yii\datetime\assets\DateTimeAsset;
 
 /**
  * Class DateTimeWidget
@@ -63,6 +63,10 @@ class DateTimeWidget extends InputWidget
      * @link https://github.com/moment/moment/tree/develop/locale
      */
     public $locale;
+    /**
+     * @var bool
+     */
+    public $showInput = true;
 
     /**
      * @var array
@@ -164,9 +168,17 @@ class DateTimeWidget extends InputWidget
     protected function renderInput()
     {
         if ($this->hasModel()) {
-            $content = Html::activeTextInput($this->model, $this->attribute, $this->options);
+            if ($this->showInput) {
+                $content = Html::activeTextInput($this->model, $this->attribute, $this->options);
+            } else {
+                $content = Html::activeHiddenInput($this->model, $this->attribute, $this->options);
+            }
         } else {
-            $content = Html::textInput($this->name, $this->value, $this->options);
+            if ($this->showInput) {
+                $content = Html::textInput($this->name, $this->value, $this->options);
+            } else {
+                $content = Html::hiddenInput($this->name, $this->value, $this->options);
+            }
         }
         return $content;
     }

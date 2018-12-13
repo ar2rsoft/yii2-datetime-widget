@@ -1,5 +1,5 @@
 <?php
-namespace trntv\yii\datetime\assets;
+namespace ar2rsoft\yii\datetime\assets;
 
 use yii\web\AssetBundle;
 
@@ -33,7 +33,7 @@ class DateTimeAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
-        'trntv\yii\datetime\assets\MomentAsset'
+        'ar2rsoft\yii\datetime\assets\MomentAsset'
     ];
 
 }

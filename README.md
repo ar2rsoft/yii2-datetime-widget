@@ -65,6 +65,8 @@ Once the extension is installed, simply use it in your code by  :
 
 ``containerOptions`` - widget container optionsgit
 
+``showInput`` - show input with date (if false input will hidden)
+
 ``clientOptions`` - [full list of available options](http://eonasdan.github.io/bootstrap-datetimepicker/Options/)
 
 *** Note:
