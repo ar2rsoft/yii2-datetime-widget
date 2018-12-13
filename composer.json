@@ -1,13 +1,13 @@
 {
-  "name": "trntv/yii2-datetime-widget",
+  "name": "ar2rsoft/yii2-datetime-widget",
   "description": "Date/Time Picker widget for Yii2 framework",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","datetime picker","bootstrap","widget"],
   "license": "GPL-3.0+",
   "authors": [
     {
-        "name": "Eugene Terentev",
-        "email": "eugene@terentev.net"
+        "name": "Artur Terbalyan",
+        "email": "ar2rsoft@gmail.com"
     }
   ],
   "require": {
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-        "trntv\\yii\\datetime\\": "src/"
+        "ar2rsoft\\yii\\datetime\\": "src/"
     }
   },
   "repositories": [
